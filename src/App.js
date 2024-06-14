@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
+import TicGame from './TicTacToe.js'
+import Products from './Products'
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +20,8 @@ function App() {
         >
           Learn React
         </a>
+        // <TicGame />
+        <Products />
       </header>
     </div>
   );
