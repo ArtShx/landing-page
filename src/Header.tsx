@@ -1,3 +1,5 @@
+import Particles from "./Particles"
+
 function ProfilePhoto() {
   let image_url = "https://pngimg.com/uploads/pokemon/pokemon_PNG66.png"
   return (
@@ -27,7 +29,8 @@ function Socials() {
 
 function Header() {
   return (
-    <div className="">
+    <div className="size-full">
+      <Particles />
       <ProfilePhoto />
       <Description />
       <Socials />
