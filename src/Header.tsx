@@ -38,7 +38,7 @@ function Socials() {
 
 function Header() {
   return (
-    <div id="header" style={{position: "relative"}} className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section   w-full ">
+    <section id="header" style={{position: "relative"}} className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section">
       <Particles />
       <div style={{position: "absolute", top: 0, left: 0, right: 0, zIndex: 1}} className="">
 
@@ -46,7 +46,7 @@ function Header() {
         <Description />
         <Socials />
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -36,7 +36,7 @@ function Tools({ tools }: { tools: ISkill[]}) {
 function Project({ project }: { project: IProject }) {
   return (
     <div className="group mb-3 sm:mb-8 last:mb-0">
-      <div className="bg-gray-100 max-w-[58rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative lg:min-h-[21rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 mx-auto">
+      <div className="bg-gray-100 max-w-[58rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative lg:min-h-[21rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 mx-auto ">
         <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col ">
 
           <h4 className="text-2xl font-semibold mb-4">{project.title}</h4>
@@ -53,7 +53,7 @@ function Project({ project }: { project: IProject }) {
             }
           </div>
         </div>
-        <img className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={project.photo}></img>
+        <img className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={project.photo} />
       </div>
   </div>
   )
@@ -83,17 +83,14 @@ const ProjectGroup = () => {
   }];
 
   return (
-    <div id="projectGroup" className="">
-      <section className="mt-20 scroll-mt-28 mb-28">
-
-        <h2 className="text-3xl font-medium capitalize mb-8 text-center">My Projects</h2>
-        {
-          projects.map((proj) => {
-            return <Project key={proj.title} project={proj} />
-          })
-        }
-      </section>
-    </div>
+    <section id="projects" className="mt-20 scroll-mt-28 mb-28">
+      <h2 className="text-3xl font-medium capitalize mb-8 text-center">My Projects</h2>
+      {
+        projects.map((proj) => {
+          return <Project key={proj.title} project={proj} />
+        })
+      }
+    </section>
   );
 };
 export default ProjectGroup;
