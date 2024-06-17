@@ -1,11 +1,8 @@
+import { ISkill, my_skills } from './Skills'
 
 const YT_LOGO = process.env.PUBLIC_URL + '/yt.png'
 const GH_LOGO = process.env.PUBLIC_URL + '/gh.png'
 
-interface ISkill {
-  name: string,
-  logo?: string
-};
 
 interface IProject {
   title: string,
@@ -16,16 +13,18 @@ interface IProject {
   github?: string
 };
 
+
 function Tools({ tools }: { tools: ISkill[]}) {
+  // Inline tools used for each project
   return (
     <ul className="flex flex-wrap gap-2 mb-3 sm:mt-auto">
-      <span className="font-bold text-gray-500 dark:text-white/70">Made with: </span>
+      <span className="font-bold text-gray-500 dark:text-white/70 mt-2">Made with: </span>
       {
         tools.map((tool) => {
           if (tool.logo === undefined) { return }
           return (
             <li key={tool.name} className="flex flex-wrap gap-2 mb-3 sm:mt-auto">
-              <img src={tool.logo} alt={tool.name} className="w-10 mr-3 text-2xl iconify iconify--logos"></img>
+              <img src={tool.logo} alt={tool.name} className="h-10 mr-3 text-2xl iconify iconify--logos"></img>
             </li>
           )
         })
@@ -38,7 +37,7 @@ function Project({ project }: { project: IProject }) {
   return (
     <div className="group mb-3 sm:mb-8 last:mb-0">
       <div className="bg-gray-100 max-w-[58rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative lg:min-h-[21rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 mx-auto">
-        <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col h-full">
+        <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col ">
 
           <h4 className="text-2xl font-semibold mb-4">{project.title}</h4>
            <Tools tools={project.tools}/>
@@ -64,41 +63,27 @@ const ProjectGroup = () => {
   let skill_failed: ISkill = {
     name: "Unknown error"
   };
-  let map = new Map<string, ISkill>();
-  map.set("py", {
-    name: "Python",
-    logo: process.env.PUBLIC_URL + '/python.png'
-  });
-  map.set("js", {
-    name: "Javascript",
-    logo: process.env.PUBLIC_URL + '/js.png'
-  });
-
-  map.set("three.js", {
-    name: "Three.js",
-    logo: process.env.PUBLIC_URL + '/threejs.png'
-  });
 
   const projects: IProject[] = [{
     title: "Pix360 - Annotation Tool",
     description: "Wire annotation tool for 3d scene. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     photo: process.env.PUBLIC_URL + "/project-360-2.png",
     tools: [
-      map.get("js") ?? skill_failed,
-      map.get("three.js") ?? skill_failed
+      my_skills.get("js") ?? skill_failed,
+      my_skills.get("three.js") ?? skill_failed
     ],
     video: "www.google.com"
   }, {
     title: "Pix360 - Segmentation",
     description: "Scene segmentation on RGB image",
     photo: process.env.PUBLIC_URL + "/project-360-1.png",
-    tools: [map.get("py") ?? skill_failed],
+    tools: [my_skills.get("py") ?? skill_failed],
     video: "www.google.com",
     github: "www.github.com"
   }];
 
   return (
-    <div className="">
+    <div id="projectGroup" className="">
       <section className="mt-20 scroll-mt-28 mb-28">
 
         <h2 className="text-3xl font-medium capitalize mb-8 text-center">My Projects</h2>
