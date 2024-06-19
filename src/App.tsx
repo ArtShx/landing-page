@@ -4,6 +4,7 @@ import Header from './Header';
 import ProjectGroup from './Projects';
 import { Skills } from './Skills';
 import Experience from './Experience';
+import Education from './Education';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <ProjectGroup />
         <Skills />
         <Experience />
+        <Education />
       </div>
     </div>
   );

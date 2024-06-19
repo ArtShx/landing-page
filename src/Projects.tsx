@@ -40,7 +40,7 @@ function Project({ project }: { project: IProject }) {
         <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col ">
 
           <h4 className="text-2xl font-semibold mb-4">{project.title}</h4>
-           <Tools tools={project.tools}/>
+          <Tools tools={project.tools}/>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 mb-3 text-justify">{project.description}</p>
           <div className="m-2 flex">
             {
