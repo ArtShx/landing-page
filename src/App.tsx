@@ -1,20 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
 import Header from './Header';
 import ProjectGroup from './Projects';
 import { Skills } from './Skills';
 import Experience from './Experience';
 import Education from './Education';
+import ContactMe from './Contact';
 
 function App() {
   return (
-    <div className="App bg-white dark:bg-black font-mono">
+    <div className="App bg-gray-50 text-gray-950 relative dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90">
       <Header />
       <div className="mx-auto">
         <ProjectGroup />
         <Skills />
         <Experience />
         <Education />
+        <ContactMe />
       </div>
     </div>
   );

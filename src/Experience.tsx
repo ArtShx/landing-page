@@ -16,10 +16,8 @@ function parsePeriod(period: Period, is_left: boolean) {
 
   let start = monthNumberToString(period.start_date.getMonth()) + " " + period.start_date.getFullYear();
   let end = period.ongoing ? "Present" : monthNumberToString(period.end_date?.getMonth()) + " " + period.end_date?.getFullYear();
-  console.log(end);
 
-  let date_style: React.CSSProperties = {
-    width: "100%",
+  let date_style: React.CSSProperties = { width: "100%",
     left: is_left ? "124%" : "auto",
     top: "6px",
     right: is_left ? "auto" : "124%"
@@ -80,7 +78,7 @@ function Experience() {
           {
             jobs.map((job, index) => {
               return (
-                  <Job job={job} index={index} />
+                  <Job job={job} index={index} key={index} />
               )
             })
           }

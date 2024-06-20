@@ -33,7 +33,6 @@ export function Skills() {
             </li>
           )
         })
-
       }
       </ul>
     </section>

@@ -47,7 +47,7 @@ function parsePeriod(period: Period, is_left: boolean) {
 
 function Course(course: IEducation) {
   return (
-      <div className="mx-auto max-w-xl mt-4 flex gap-6 border border-black/5 rounded-lg pt-4 pb-7 px-5 md:p-10 bg-gray-100 dark:bg-white/10 dark:hover:bg-white/20">
+      <div key={course.course_name} className="mx-auto max-w-xl mt-4 flex gap-6 border border-black/5 rounded-lg pt-4 pb-7 px-5 md:p-10 bg-gray-100 dark:bg-white/10 dark:hover:bg-white/20">
         <div>
           <img src={ course.photo } className="" width="150" height="150" />
         </div>
@@ -63,7 +63,7 @@ function Course(course: IEducation) {
 function Education() {
   return (
     <section id="education" className="mt-20 scroll-mt-28 mb-28">
-      <h2 className="text-3xl font-medium capitalize mb-8 text-center">My Experience</h2>
+      <h2 className="text-3xl font-medium capitalize mb-8 text-center">My Education</h2>
       <div className="">
         {
           educations.map((course) => {
