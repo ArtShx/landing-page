@@ -1,7 +1,8 @@
 import { Period } from "./Utils";
 import { monthNumberToString } from "./Utils";
 
-const FATEC_LOGO = process.env.PUBLIC_URL + '/fatec.png'
+const FATEC_LOGO = process.env.PUBLIC_URL + '/fatec.jpg'
+const CLARETIANO_LOGO = process.env.PUBLIC_URL + '/claretiano.jpeg'
 
 interface IEducation {
   school_name: string,
@@ -25,7 +26,7 @@ const educations: Array<IEducation> = [{
     new Date(2016, 8),
     new Date(2019,7)
   ),
-  photo: ""
+  photo: CLARETIANO_LOGO
 }];
 
 

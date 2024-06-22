@@ -2,16 +2,16 @@
 export let my_skills = new Map<string, ISkill>();
 my_skills.set("py", {
   name: "Python",
-  logo: process.env.PUBLIC_URL + '/python.png'
+  logo: process.env.PUBLIC_URL + '/python.svg'
 });
 my_skills.set("js", {
   name: "Javascript",
-  logo: process.env.PUBLIC_URL + '/js.png'
+  logo: process.env.PUBLIC_URL + '/js.svg'
 });
 
 my_skills.set("three.js", {
   name: "Three.js",
-  logo: process.env.PUBLIC_URL + '/threejs.png'
+  logo: process.env.PUBLIC_URL + '/threejs.svg'
 });
 
 export interface ISkill {

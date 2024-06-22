@@ -1,8 +1,5 @@
 import { ISkill, my_skills } from './Skills'
-
-const YT_LOGO = process.env.PUBLIC_URL + '/yt.png'
-const GH_LOGO = process.env.PUBLIC_URL + '/gh.png'
-
+import { FaGithub, FaYoutube } from "react-icons/fa";
 
 interface IProject {
   title: string,
@@ -45,11 +42,11 @@ function Project({ project }: { project: IProject }) {
           <div className="m-2 flex">
             {
               project.video ? 
-                <a href={project.video} target="_blank" rel="noopener noreferrer" className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"><img src={YT_LOGO} className="w-5" />Demo</a> : <></>
+                <a href={project.video} target="_blank" rel="noopener noreferrer" className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"><FaYoutube className='mr-1'/>Demo</a> : <></>
             }
             {
               project.github ? 
-                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center bg-transparent text-gray py-2 px-4 mr-2 rounded-full border-2 border-black hover:scale-105"><img src={GH_LOGO} className="w-5" />Demo</a> : <></>
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center bg-transparent text-gray py-2 px-4 mr-2 rounded-full border-2 border-black hover:scale-105"><FaGithub className='mr-1'/> Demo</a> : <></>
             }
           </div>
         </div>

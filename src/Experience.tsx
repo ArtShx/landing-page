@@ -1,6 +1,7 @@
 import { Period, monthNumberToString } from './Utils';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import { FaSuitcase } from "react-icons/fa";
 
 const SUITCASE_LOGO = process.env.PUBLIC_URL + '/suitecase.png'
 
@@ -23,8 +24,6 @@ function parsePeriod(period: Period, is_left: boolean) {
     right: is_left ? "auto" : "124%"
   };
 
-  let end_date: Date = period.end_date ? period.end_date : new Date();
-  // let difference = getDifferenceInYearsAndMonths(period.start_date, end_date);
   let difference = period.getDifferenceInYearsAndMonths();
   return <span className="text-sm static lg:absolute text-gray-500" style={date_style}>{start} - {end} ({difference}) </span>
 }
@@ -35,7 +34,7 @@ function Job({ job, index }: { job: IJob, index: number }) {
       <VerticalTimelineElement
         className="vertical-timeline-element--work shadow-none "
         contentArrowStyle={{ borderRight: '7px solid  rgb(200, 200, 200)' }}
-        icon=<img src={SUITCASE_LOGO} />
+        icon=<FaSuitcase/>
         iconClassName="bg-white"
         position={index % 2 == 0 ? 'left' : 'right' }>
 
