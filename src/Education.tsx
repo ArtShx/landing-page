@@ -29,23 +29,6 @@ const educations: Array<IEducation> = [{
   photo: CLARETIANO_LOGO
 }];
 
-
-function parsePeriod(period: Period, is_left: boolean) {
-
-  let start = monthNumberToString(period.start_date.getMonth()) + " " + period.start_date.getFullYear();
-  let end = period.ongoing ? "Present" : monthNumberToString(period.end_date?.getMonth()) + " " + period.end_date?.getFullYear();
-  console.log(end);
-
-  let date_style: React.CSSProperties = {
-    width: "100%",
-    left: is_left ? "124%" : "auto",
-    top: "6px",
-    right: is_left ? "auto" : "124%"
-  };
-
-  return <span className="" >{start} - {end} </span>
-}
-
 function Course(course: IEducation) {
   return (
       <div key={course.course_name} className="mx-auto max-w-xl mt-4 flex gap-6 border border-black/5 rounded-lg pt-4 pb-7 px-5 md:p-10 bg-gray-100 dark:bg-white/10 dark:hover:bg-white/20">

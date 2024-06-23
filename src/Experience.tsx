@@ -1,9 +1,7 @@
-import { Period, monthNumberToString } from './Utils';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import {Period, monthNumberToString} from './Utils';
+import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import { FaSuitcase } from "react-icons/fa";
-
-const SUITCASE_LOGO = process.env.PUBLIC_URL + '/suitecase.png'
+import {FaSuitcase} from "react-icons/fa";
 
 
 interface IJob {
@@ -18,7 +16,8 @@ function parsePeriod(period: Period, is_left: boolean) {
   let start = monthNumberToString(period.start_date.getMonth()) + " " + period.start_date.getFullYear();
   let end = period.ongoing ? "Present" : monthNumberToString(period.end_date?.getMonth()) + " " + period.end_date?.getFullYear();
 
-  let date_style: React.CSSProperties = { width: "100%",
+  let date_style: React.CSSProperties = {
+    width: "100%",
     left: is_left ? "124%" : "auto",
     top: "6px",
     right: is_left ? "auto" : "124%"
@@ -29,24 +28,24 @@ function parsePeriod(period: Period, is_left: boolean) {
 }
 
 
-function Job({ job, index }: { job: IJob, index: number }) {
+function Job({job, index}: {job: IJob, index: number}) {
   return (
-      <VerticalTimelineElement
-        className="vertical-timeline-element--work shadow-none "
-        contentArrowStyle={{ borderRight: '7px solid  rgb(200, 200, 200)' }}
-        icon=<FaSuitcase/>
-        iconClassName="bg-white"
-        position={index % 2 == 0 ? 'left' : 'right' }>
+    <VerticalTimelineElement
+      className="vertical-timeline-element--work shadow-none "
+      contentArrowStyle={{borderRight: '7px solid  rgb(200, 200, 200)'}}
+      icon=<FaSuitcase />
+      iconClassName="bg-white"
+      position={index % 2 === 0 ? 'left' : 'right'}>
 
-        <div className=" !ml-0 p-8" style={{background: "#f3f4f6", boxShadow: "none", border: "1px solid rgba(0, 0, 0, 0.05)"}}>
+      <div className=" !ml-0 p-8" style={{background: "#f3f4f6", boxShadow: "none", border: "1px solid rgba(0, 0, 0, 0.05)"}}>
 
-          <h5 className="vertical-timeline-element-title font-semibold">{ job.title }</h5>
-          <h6 className="vertical-timeline-element-subtitle">{ job.company } &emsp;&emsp;&emsp; { parsePeriod(job.period, index % 2 == 0) }</h6>
-                  
+        <h5 className="vertical-timeline-element-title font-semibold">{job.title}</h5>
+        <h6 className="vertical-timeline-element-subtitle">{job.company} &emsp;&emsp;&emsp; {parsePeriod(job.period, index % 2 === 0)}</h6>
 
-          <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">{ job.description }</p>
-        </div>
-      </VerticalTimelineElement>
+
+        <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">{job.description}</p>
+      </div>
+    </VerticalTimelineElement>
   )
 }
 
@@ -57,30 +56,30 @@ const jobs: Array<IJob> = [{
   period: new Period(
     new Date(2023, 2),
   )
-  }, {
+}, {
   title: "Software Engineer",
   description: "Did x, y and z.",
   company: "iSPORTiSTiCS",
   period: new Period(
     new Date(2019, 2),
     new Date(2023, 5),
-  ) 
+  )
 }];
 
 function Experience() {
   return (
     <section id="experience" className="mt-20 scroll-mt-28 mb-28">
       <h2 className="text-3xl font-medium capitalize mb-8 text-center ">My Experience</h2>
-      <VerticalTimeline 
+      <VerticalTimeline
         lineColor='#f3f4f6'
         className='!pt-0'>
-          {
-            jobs.map((job, index) => {
-              return (
-                  <Job job={job} index={index} key={index} />
-              )
-            })
-          }
+        {
+          jobs.map((job, index) => {
+            return (
+              <Job job={job} index={index} key={index} />
+            )
+          })
+        }
       </VerticalTimeline>
     </section>
   )
