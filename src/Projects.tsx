@@ -63,7 +63,7 @@ const ProjectGroup = () => {
 
   const projects: IProject[] = [{
     title: "Pix360 - Annotation Tool",
-    description: "Wire annotation tool for 3d scene. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: "Wire annotation tool for 3d scene. It's an annotation tool browser-based for creating/editing wire segment on the 3d scene. The tool uses Javascript, Three.js for 3d rendering and manipulation, computer graphics and georeferencing/coordinate reference system theory.",
     photo: process.env.PUBLIC_URL + "/project-360-2.png",
     tools: [
       my_skills.get("js") ?? skill_failed,
