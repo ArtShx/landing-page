@@ -1,0 +1,67 @@
+[
+  {
+    "key": "py",
+    "name": "Python",
+    "logo": "python.png"
+  },
+  {
+    "key": "numpy",
+    "name": "Numpy",
+    "logo": "numpy.png"
+  },
+  {
+    "key": "pytorch",
+    "name": "PyTorch",
+    "logo": "pytorch.png"
+  },
+  {
+    "key": "pandas",
+    "name": "Pandas",
+    "logo": "pandas.png"
+  },
+  {
+    "key": "cv",
+    "name": "OpenCV",
+    "logo": "opencv.webp"
+  },
+  {
+    "key": "ffmpeg",
+    "name": "FFmpeg",
+    "logo": "ffmpeg.png"
+  },
+  {
+    "key": "aws",
+    "name": "AWS",
+    "logo": "aws.webp"
+  },
+  {
+    "key": "git",
+    "name": "Git",
+    "logo": "git.png"
+  },
+  {
+    "key": "docker",
+    "name": "Docker",
+    "logo": "docker.png"
+  },
+  {
+    "key": "linux",
+    "name": "Linux",
+    "logo": "linux.png"
+  },
+  {
+    "key": "js",
+    "name": "Javascript",
+    "logo": "js.svg"
+  },
+  {
+    "key": "three.js",
+    "name": "Three.js",
+    "logo": "threejs.svg"
+  },
+  {
+    "key": "rust",
+    "name": "Rust",
+    "logo": "rust.png"
+  }
+]

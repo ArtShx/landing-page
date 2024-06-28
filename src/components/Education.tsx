@@ -1,5 +1,4 @@
-import { Period } from "./Utils";
-import { monthNumberToString } from "./Utils";
+import { Period, monthNumberToString } from "./../Utils";
 
 const FATEC_LOGO = process.env.PUBLIC_URL + '/fatec.jpg'
 const CLARETIANO_LOGO = process.env.PUBLIC_URL + '/claretiano.jpeg'

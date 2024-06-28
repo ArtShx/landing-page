@@ -1,9 +1,9 @@
-import Header from './Header';
-import ProjectGroup from './Projects';
-import { Skills } from './Skills';
-import Experience from './Experience';
-import Education from './Education';
-import ContactMe from './Contact';
+import Header from './components/Header';
+import ProjectGroup from './components/Projects';
+import { Skills } from './components/Skills';
+import Experience from './components/Experience';
+import Education from './components/Education';
+import ContactMe from './components/Contact';
 
 function App() {
   return (

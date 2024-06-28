@@ -1,17 +1,11 @@
+import data from './../data/skills.json'
 
 export let my_skills = new Map<string, ISkill>();
-my_skills.set("py", {
-  name: "Python",
-  logo: process.env.PUBLIC_URL + '/python.svg'
-});
-my_skills.set("js", {
-  name: "Javascript",
-  logo: process.env.PUBLIC_URL + '/js.svg'
-});
-
-my_skills.set("three.js", {
-  name: "Three.js",
-  logo: process.env.PUBLIC_URL + '/threejs.svg'
+data.map((skill) => {
+  my_skills.set(skill.key, {
+    name: skill.name,
+    logo: skill.logo
+  });
 });
 
 export interface ISkill {
@@ -38,4 +32,5 @@ export function Skills() {
     </section>
   )
 }
+
 

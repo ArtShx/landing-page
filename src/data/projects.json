@@ -1,0 +1,27 @@
+[{
+  "title": "3D Annotation Tool",
+  "description": "Wire annotation tool for 3d scene. It's an annotation tool browser-based for creating/editing wire segment on the 3d scene. The tool uses Javascript, Three.js for 3d rendering and manipulation, computer graphics and georeferencing/coordinate reference system theory.",
+  "photo": "/project-360-2.png",
+  "tools": [
+     "js", "three.js", "py", "docker", "pandas"
+  ],
+  "video": "www.google.com"
+}, {
+  "title": "Image Segmentation",
+  "description": "Scene segmentation on RGB image for scene understanding, more focused on wires and high vegetation.",
+  "photo": "/project-360-1.png",
+  "tools": ["py", "numpy", "pytorch", "cv", "docker"],
+  "video": "https://drive.google.com/file/d/1NP7KS_MQZzLbUStvAmZNU0rRfTPuvk5U/view?usp=drive_link"
+}, {
+  "title": "Lane and shoulder overtake detection",
+  "description": "Analyse the video and automatically detect road lanes and shoulder overtakes.",
+  "photo": "lane_detection.png",
+  "tools": ["py", "numpy", "pytorch", "cv", "docker"],
+  "video": "https://drive.google.com/file/d/1XnZd1tBBTprcylPeqNrDEcSt4sVoYAyy/view?usp=sharing"
+}, {
+  "title": "Autonomous camera man",
+  "description": "Automatically frame the scene according to the ongoing game. The input is a video recording the entire field and outputs a framed video/streaming. The solution involves computer vision techniques and video streaming tools.",
+  "photo": "autocam.png",
+  "tools": ["py", "numpy", "pytorch", "cv", "ffmpeg", "docker", "aws"],
+  "video": "https://drive.google.com/file/d/1CgPo211oSVCW72hr6zFuys_pA-q9q3pd/view?usp=sharing"
+}]

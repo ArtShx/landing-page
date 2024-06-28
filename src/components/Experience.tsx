@@ -1,4 +1,4 @@
-import {Period, monthNumberToString} from './Utils';
+import {Period, monthNumberToString} from './../Utils';
 import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import {FaSuitcase} from "react-icons/fa";

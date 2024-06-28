@@ -1,7 +1,7 @@
 import {BsFillSendFill} from "react-icons/bs";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import send_mail from "./server";
+import send_mail from "./../server";
 
 const my_email = "miada.arthur@gmail.com"
 
