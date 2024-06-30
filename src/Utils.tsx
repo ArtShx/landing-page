@@ -18,26 +18,30 @@ export class Period implements IPeriod {
   }
 
   getDifferenceInYearsAndMonths(): string {
-      let startYear = this.start_date.getFullYear();
-      let startMonth = this.start_date.getMonth();
+    let startYear = this.start_date.getFullYear();
+    let startMonth = this.start_date.getMonth();
 
-      let end_date: Date = this.end_date ? this.end_date : new Date();
-      let endYear = end_date.getFullYear();
-      let endMonth = end_date.getMonth();
+    let end_date: Date = this.end_date ? this.end_date : new Date();
+    let endYear = end_date.getFullYear();
+    let endMonth = end_date.getMonth();
 
-      let yearDiff = endYear - startYear;
-      let monthDiff = endMonth - startMonth;
+    let yearDiff = endYear - startYear;
+    let monthDiff = endMonth - startMonth;
 
-      if (monthDiff < 0) {
-          yearDiff--;
-          monthDiff += 12;
-      }
+    if (monthDiff < 0) {
+        yearDiff--;
+        monthDiff += 12;
+    }
 
-      if (yearDiff > 0) {
-          return `${yearDiff} year${yearDiff > 1 ? 's' : ''} and ${monthDiff} month${monthDiff > 1 ? 's' : ''}`;
+    if (yearDiff > 0) {
+      if (monthDiff == 0) {
+        return `${yearDiff} year${yearDiff > 1 ? 's' : ''}`;
       } else {
-          return `${monthDiff} month${monthDiff > 1 ? 's' : ''}`;
+        return `${yearDiff} year${yearDiff > 1 ? 's' : ''} and ${monthDiff} month${monthDiff > 1 ? 's' : ''}`;
       }
+    } else {
+        return `${monthDiff} month${monthDiff > 1 ? 's' : ''}`;
+    }
   }
   
 }

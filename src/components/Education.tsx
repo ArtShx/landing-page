@@ -1,7 +1,8 @@
-import { Period, monthNumberToString } from "./../Utils";
+import { Period } from "./../Utils";
+import { S3 } from '../data/aws';
 
-const FATEC_LOGO = process.env.PUBLIC_URL + '/fatec.jpg'
-const CLARETIANO_LOGO = process.env.PUBLIC_URL + '/claretiano.jpeg'
+const FATEC_LOGO = S3.url() + 'fatec.jpg'
+const CLARETIANO_LOGO = S3.url() + 'claretiano.jpeg'
 
 interface IEducation {
   school_name: string,
@@ -12,15 +13,15 @@ interface IEducation {
 
 const educations: Array<IEducation> = [{
   school_name: "Fatec",
-  course_name: "Informatics for business",
+  course_name: "Business Informatics",
   period: new Period(
     new Date(2016, 8),
     new Date(2019,7)
   ),
   photo: FATEC_LOGO
 }, {
-  school_name: "Claretiano",
-  course_name: "ADS",
+  school_name: "Claretiano University Center",
+  course_name: "Systems Analysis and Development",
   period: new Period(
     new Date(2016, 8),
     new Date(2019,7)

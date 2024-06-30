@@ -1,7 +1,9 @@
+
 import {ISkill, my_skills} from './Skills'
 import {FaGithub, FaYoutube} from "react-icons/fa";
 
 import data from './../data/projects.json'
+import { S3 } from '../data/aws';
 
 interface IProject {
   title: string,
@@ -20,10 +22,8 @@ function Tools({tools}: {tools: string[]}) {
       <span className="font-bold text-gray-500 dark:text-white/70 mt-2">Made with: </span>
       {
         tools.map((tool) => {
-          console.log(tool)
           const skill = my_skills.get(tool); 
           if (skill === undefined) {return }
-          console.log(skill);
           const key = skill?.name ?? "notfound";
           return (
             <li key={key} className="flex flex-wrap gap-2 mb-3 sm:mt-auto">
@@ -56,7 +56,7 @@ function Project({project}: {project: IProject}) {
               }
             </div>
           </div>
-          <img className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={project.photo} alt={project.title} />
+          <img className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={S3.url() + project.photo} alt={project.title} />
 
         </div>
       </div>

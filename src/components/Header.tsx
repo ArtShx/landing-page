@@ -1,10 +1,10 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 import Particles from "./Particles"
+import { S3 } from '../data/aws';
 
 const PROFILE_IMAGE = "https://pngimg.com/uploads/pokemon/pokemon_PNG66.png"
-const GH_LOGO = process.env.PUBLIC_URL + '/gh.png'
-const LKDIN_LOGO = process.env.PUBLIC_URL + '/linkedin.png'
+const LKDIN_LOGO = S3.url() + 'linkedin.png'
 
 function ProfilePhoto() {
   return (
@@ -17,7 +17,7 @@ function ProfilePhoto() {
 function Description() {
   return (
     <div className="mt-5">
-      <p className="mb-10 mt-4 px-0 sm:px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white max-w-[50rem] mx-auto text-center">Hello, my name is <span className="font-bold">Arthur Miada</span>. I'm a <span className="font-bold">software engineer</span>.</p> 
+      <p className="mb-10 mt-4 px-0 sm:px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white max-w-[50rem] mx-auto text-center">Hello, my name is <span className="font-bold">Arthur Miada</span> and I'm a <span className="font-bold">software engineer</span>. Started studying IT in 2014, spent the last years working with Computer Vision and image/video processing.</p> 
     </div>
   )
 

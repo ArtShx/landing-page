@@ -1,0 +1,16 @@
+[{
+  "title": "Computer Vision Engineer",
+  "description": "Did x, y and z. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  "company": "Pix Force",
+  "period": {
+    "start": "2019-03"
+  }
+}, {
+  "title": "Software Engineer",
+  "description": "Did x, y and z.",
+  "company": "iSPORTiSTiCS",
+  "period": {
+    "start": "2019-02",
+    "end": "2023-02"
+  }
+}]

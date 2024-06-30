@@ -1,3 +1,4 @@
+import React from 'react';
 import {Period, monthNumberToString} from './../Utils';
 import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -17,9 +18,7 @@ function parsePeriod(period: Period, is_left: boolean) {
   let end = period.ongoing ? "Present" : monthNumberToString(period.end_date?.getMonth()) + " " + period.end_date?.getFullYear();
 
   let date_style: React.CSSProperties = {
-    width: "100%",
-    left: is_left ? "124%" : "auto",
-    top: "6px",
+    width: "100%", left: is_left ? "124%" : "auto", top: "6px",
     right: is_left ? "auto" : "124%"
   };
 
@@ -43,7 +42,14 @@ function Job({job, index}: {job: IJob, index: number}) {
         <h6 className="vertical-timeline-element-subtitle">{job.company} &emsp;&emsp;&emsp; {parsePeriod(job.period, index % 2 === 0)}</h6>
 
 
-        <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">{job.description}</p>
+        <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">{
+          job.description.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </p>
       </div>
     </VerticalTimelineElement>
   )
@@ -51,19 +57,38 @@ function Job({job, index}: {job: IJob, index: number}) {
 
 const jobs: Array<IJob> = [{
   title: "Computer Vision Engineer",
-  description: "Did x, y and z. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description: "Developed a scene recognition system utilizing data from LiDAR, 360-degree cameras, and GPS sensors mounted on a vehicle. The project aimed to analyze the environment to identify electric distribution wires and assess their proximity to high vegetation.",
   company: "Pix Force",
   period: new Period(
     new Date(2023, 2),
+    new Date(2024, 5),
   )
 }, {
   title: "Software Engineer",
-  description: "Did x, y and z.",
+  description: "Product development applied to sports videos using computer vision algorithms, machine learning, and deep learning. Key projects I have worked on include:\n" +
+    "- Identification of highlights (goals, penalties, shots on goal, etc.);\n" +
+    "- Automatic framing of the game (similar to the work of a cameraman);\n" +
+    "- Development of pipelines for multimedia data processing (working with FFmpeg, GStreamer, RTMP, RTSP, HLS, x264, etc.);\n" +
+    "- Backend architecture development integrated with AWS products (EC2, Lambdas, Cloudwatch, MediaLive, etc.);\n" +
+    "- Maintenance of solutions through automated unit testing and CI/CD.",
   company: "iSPORTiSTiCS",
   period: new Period(
     new Date(2019, 2),
-    new Date(2023, 5),
+    new Date(2023, 2),
   )
+}, {
+  title: "System Analyst",
+  description: "Responsible for the digital certification products. Activities include:\n" +
+    "- Development of new profiles for each client (write APDU commands in order to install the desired digital certificates on to the cryptographic device);\n" +
+    "- Responsible for the proper functioning of production machines;\n" +
+    "- Customer support and service;\n" +
+    "- Homologation of products at INMETRO In my role, I work with Java, C#, SQL Server and a little bit with C++.",
+  company: "Mantis AI",
+  period: new Period(
+    new Date(2016, 5),
+    new Date(2019, 2),
+  )
+
 }];
 
 function Experience() {
