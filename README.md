@@ -23,6 +23,7 @@ You can access it [here](http://arthurmiada.com).
 
 ```
 docker build -f Dockerfile -t landing-page:latest .
+docker tag landing-page:latest 211125655451.dkr.ecr.us-east-2.amazonaws.com/landing-page:{VERSION}
 aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 211125655451.dkr.ecr.us-east-2.amazonaws.com
 docker push 211125655451.dkr.ecr.us-east-2.amazonaws.com/landing-page:{VERSION}
 

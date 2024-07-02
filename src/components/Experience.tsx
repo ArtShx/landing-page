@@ -71,7 +71,7 @@ const jobs: Array<IJob> = [{
     "- Development of pipelines for multimedia data processing (working with FFmpeg, GStreamer, RTMP, RTSP, HLS, x264, etc.);\n" +
     "- Backend architecture development integrated with AWS products (EC2, Lambdas, Cloudwatch, MediaLive, etc.);\n" +
     "- Maintenance of solutions through automated unit testing and CI/CD.",
-  company: "iSPORTiSTiCS",
+  company: "Mantis AI",
   period: new Period(
     new Date(2019, 2),
     new Date(2023, 2),
@@ -83,7 +83,7 @@ const jobs: Array<IJob> = [{
     "- Responsible for the proper functioning of production machines;\n" +
     "- Customer support and service;\n" +
     "- Homologation of products at INMETRO In my role, I work with Java, C#, SQL Server and a little bit with C++.",
-  company: "Mantis AI",
+  company: "Giesecke & Devrient",
   period: new Period(
     new Date(2016, 5),
     new Date(2019, 2),
