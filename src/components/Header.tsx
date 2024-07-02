@@ -3,7 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import Particles from "./Particles"
 import { S3 } from '../data/aws';
 
-const PROFILE_IMAGE = "https://pngimg.com/uploads/pokemon/pokemon_PNG66.png"
+const PROFILE_IMAGE = S3.url() + "profile.jpg"
 const LKDIN_LOGO = S3.url() + 'linkedin.png'
 
 function ProfilePhoto() {

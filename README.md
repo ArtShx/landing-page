@@ -9,6 +9,8 @@ You can access it [here](http://arthurmiada.com).
     - [x]: Projects;
     - [x]: Education;
     - [x]: Skills;
+    - [x]: Optimize size of images;
+    - [ ]: Embbed the videos on html and not use gdrive link directly
 - [x]: Send mail on contact me form;
 - [ ]: Pick a host provider and deploy;
     - [x]: Buy domain;
