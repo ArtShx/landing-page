@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga4';
 import { FaGithub } from "react-icons/fa";
 
 import Particles from "./Particles"
@@ -5,6 +6,15 @@ import { S3 } from '../data/aws';
 
 const PROFILE_IMAGE = S3.url() + "profile.jpg"
 const LKDIN_LOGO = S3.url() + 'linkedin.png'
+
+
+function socials_onclick(identifier: string) {
+  ReactGA.event({
+    category: "Socials",
+    action: "Click Socials",
+    label: identifier
+  })
+}
 
 function ProfilePhoto() {
   return (
@@ -26,11 +36,11 @@ function Description() {
 function Socials() {
   return (
     <div className="flex flex-row items-center justify-center gap-3 px-4 text-lg font-medium">
-      <a href="https://www.github.com/ArtShx" target="_blank" className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack text-gray-950">
+      <a href="https://www.github.com/ArtShx" target="_blank" className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack text-gray-950" onClick={(e) => {socials_onclick("GitHub")}}>
         GitHub
         <FaGithub className="h-8"/>
       </a>
-      <a href="https://www.linkedin.com/in/arthurmiada/" target="_blank" className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40">
+      <a href="https://www.linkedin.com/in/arthurmiada/" target="_blank" className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40" onClick={(e) => {socials_onclick("LinkedIn")}}>
         LinkedIn
         <img src={LKDIN_LOGO} className="h-8"/>
       </a>

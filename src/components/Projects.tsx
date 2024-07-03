@@ -1,7 +1,7 @@
 
 import {ISkill, my_skills} from './Skills'
 import {FaGithub, FaYoutube} from "react-icons/fa";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import data from './../data/projects.json'
 import { S3 } from '../data/aws';
@@ -15,10 +15,11 @@ interface IProject {
   github?: string
 };
 
-function video_onclick() {
+function video_onclick(project_name: string) {
   ReactGA.event({
     category: "Projects",
-    action: "Click Demo"
+    action: "Click Demo",
+    label: project_name
   })
 }
 
@@ -55,7 +56,7 @@ function Project({project}: {project: IProject}) {
             <div className="m-2 flex">
               {
                 project.video ?
-                  <a href={project.video} target="_blank" rel="noopener noreferrer" onClick={video_onclick} className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"><FaYoutube className='mr-1' />Demo</a> : <></>
+                  <a href={project.video} target="_blank" rel="noopener noreferrer" onClick={(e) => {video_onclick(project.title)}} className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"><FaYoutube className='mr-1' />Demo</a> : <></>
               }
               {
                 project.github ?
