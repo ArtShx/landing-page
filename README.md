@@ -5,18 +5,18 @@ You can access it [here](http://arthurmiada.com).
 
 ### TODO
 - [ ]: Fill out my curriculum:
-    - [ ]: Photo;
+    - [x]: Photo;
     - [x]: Projects;
     - [x]: Education;
     - [x]: Skills;
     - [x]: Optimize size of images;
-    - [ ]: Embbed the videos on html and not use gdrive link directly
+    - [x]: Embbed the videos on html and not use gdrive link directly
 - [x]: Send mail on contact me form;
 - [ ]: Pick a host provider and deploy;
     - [x]: Buy domain;
     - [x]: Steps for deploying new version;
-    - [ ]: Use SSL
-- [ ]: Make sure analytics is working;
+    - [x]: Use SSL
+- [x]: Make sure analytics is working;
 - [ ]: Support other languages besides english;
 
 ### Deploy

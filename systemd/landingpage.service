@@ -1,0 +1,11 @@
+[Unit]
+Description=Landing Page Service
+After=network.target
+
+[Service]
+WorkingDirectory=/home/ec2-user/
+ExecStart=/usr/bin/node /home/ec2-user/landing-page/node_modules/.bin/serve -s /home/ec2-user/landing-page/build
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

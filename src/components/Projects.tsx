@@ -47,25 +47,26 @@ function Project({project}: {project: IProject}) {
   return (
     <div className="mb-3 sm:mb-8 last:mb-0">
       <div className="bg-gray-100 max-w-[58rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative lg:min-h-[21rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 mx-auto ">
-        <div className="group">
-          <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col ">
+        <div className="flex flex-wrap">
+          <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col w-[400px] mx-auto ">
 
             <h4 className="text-2xl font-semibold mb-4">{project.title}</h4>
             <Tools tools={project.tools} />
             <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70 mb-3 text-justify">{project.description}</p>
             <div className="m-2 flex">
-              {
-                project.video ?
-                  <a href={project.video} target="_blank" rel="noopener noreferrer" onClick={(e) => {video_onclick(project.title)}} className="flex items-center bg-[#111827] text-white py-2 px-4 mr-2 rounded-full hover:scale-105"><FaYoutube className='mr-1' />Demo</a> : <></>
-              }
+              
               {
                 project.github ?
                   <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center bg-transparent text-gray py-2 px-4 mr-2 rounded-full border-2 border-black hover:scale-105"><FaGithub className='mr-1' /> Demo</a> : <></>
               }
             </div>
           </div>
-          <img className="absolute hidden lg:block top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={S3.url() + project.photo} alt={project.title} />
+          {
 
+            project.video ?
+              <iframe src={project.video} allow="autoplay" className="m-auto my-auto" width="400" height="300"></iframe> : 
+              <img className="absolute  top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={S3.url() + project.photo} alt={project.title} />
+          }
         </div>
       </div>
     </div>
@@ -73,10 +74,6 @@ function Project({project}: {project: IProject}) {
 }
 
 const ProjectGroup = () => {
-  let skill_failed: ISkill = {
-    name: "Unknown error"
-  };
-
   const projects: IProject[] = data;
   return (
     <section id="projects" className="mt-20 scroll-mt-28 mb-28">
