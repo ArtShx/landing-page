@@ -1,11 +1,13 @@
 import ReactGA from 'react-ga4';
 import { FaGithub } from "react-icons/fa";
+import { GrDocumentPdf } from "react-icons/gr";
 
 import Particles from "./Particles"
 import { S3 } from '../data/aws';
 
 const PROFILE_IMAGE = S3.url() + "profile.jpg"
-const LKDIN_LOGO = S3.url() + 'linkedin.png'
+const LKDIN_LOGO = S3.url() + "linkedin.png"
+const CV_PATH = S3.url() + "Arthur - SoftwareEngineer.pdf"
 
 
 function socials_onclick(identifier: string) {
@@ -43,6 +45,11 @@ function Socials() {
       <a href="https://www.linkedin.com/in/arthurmiada/" target="_blank" className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40" onClick={(e) => {socials_onclick("LinkedIn")}}>
         LinkedIn
         <img src={LKDIN_LOGO} className="h-8"/>
+      </a>
+
+      <a href={CV_PATH} target="_blank" className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40" download onClick={(e) => {socials_onclick("Curriculum")}}>
+        Curriculum
+        <GrDocumentPdf className='h-8'/>
       </a>
     </div>
   )

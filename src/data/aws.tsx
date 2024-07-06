@@ -6,7 +6,7 @@ export namespace S3 {
     if (bucket_url === undefined) {
       throw new Error("Bucket url undefined");
     }
-    return bucket_url + "images/";
+    return bucket_url + "public/";
   }
 }
 
