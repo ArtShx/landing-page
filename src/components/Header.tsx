@@ -29,7 +29,7 @@ function ProfilePhoto() {
 function Description() {
   return (
     <div className="mt-5">
-      <p className="mb-10 mt-4 px-0 sm:px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white max-w-[50rem] mx-auto text-center">Hello, my name is <span className="font-bold">Arthur Miada</span> and I'm a <span className="font-bold">software engineer</span>. Started studying IT in 2014, spent the last years working with Computer Vision and image/video processing.</p> 
+      <p className="mb-4 md:mb-10 mt-4 px-0 sm:px-4 text-xl font-medium !leading-[1.5] sm:text-3xl lg:text-4xl text-white max-w-[50rem] mx-auto text-center">Hello, my name is <span className="font-bold">Arthur Miada</span> and I'm a <span className="font-bold">software engineer</span>. Started studying IT in 2014, spent the last years working with Computer Vision and image/video processing.</p> 
     </div>
   )
 
@@ -37,19 +37,19 @@ function Description() {
 
 function Socials() {
   return (
-    <div className="flex flex-row items-center justify-center gap-3 px-4 text-lg font-medium">
-      <a href="https://www.github.com/ArtShx" target="_blank" className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack text-gray-950" onClick={(e) => {socials_onclick("GitHub")}}>
+    <div className="flex flex-wrap items-center justify-center gap-3 px-4 text-lg font-medium">
+      <a href="https://www.github.com/ArtShx" target="_blank" className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-105 active:scale-105 transition cursor-pointer borderBlack text-gray-950 max-w-full" onClick={(e) => {socials_onclick("GitHub")}}>
         GitHub
-        <FaGithub className="h-8"/>
+        <FaGithub className="h-4 sm:h-8"/>
       </a>
       <a href="https://www.linkedin.com/in/arthurmiada/" target="_blank" className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40" onClick={(e) => {socials_onclick("LinkedIn")}}>
         LinkedIn
-        <img src={LKDIN_LOGO} className="h-8"/>
+        <img src={LKDIN_LOGO} className="h-4 sm:h-8"/>
       </a>
 
       <a href={CV_PATH} target="_blank" className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40" download onClick={(e) => {socials_onclick("Curriculum")}}>
         Curriculum
-        <GrDocumentPdf className='h-8'/>
+        <GrDocumentPdf className="h-4 sm:h-8"/>
       </a>
     </div>
   )
