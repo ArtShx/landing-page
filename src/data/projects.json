@@ -8,7 +8,7 @@
   "video": "https://drive.google.com/file/d/1gvnHIVIlDmWOQexjo-aFtn_01AMUpLk5/preview"
 }, {
   "title": "Image Segmentation",
-  "description": "Scene segmentation on RGB image for scene understanding, more focused on wires and high vegetation.",
+  "description": "Scene segmentation on RGB image for scene understanding, more focused on wires and high vegetation. Later on the segmentation was applied to classify points on 3d (check 3D annotation Tool project).",
   "photo": "project-360-1.jpg",
   "tools": ["py", "numpy", "pytorch", "cv", "docker"],
   "video": "https://drive.google.com/file/d/1NP7KS_MQZzLbUStvAmZNU0rRfTPuvk5U/preview"
