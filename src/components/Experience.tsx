@@ -23,7 +23,7 @@ function parsePeriod(period: Period, is_left: boolean) {
   };
 
   let difference = period.getDifferenceInYearsAndMonths();
-  return <span className="text-sm static lg:absolute text-gray-500" style={date_style}>{start} - {end} ({difference}) </span>
+  return <span className="text-sm static tl:absolute text-gray-500" style={date_style}>{start} - {end} ({difference}) </span>
 }
 
 
