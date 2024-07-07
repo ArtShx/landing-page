@@ -65,7 +65,7 @@ function Project({project}: {project: IProject}) {
 
             project.video ?
               <div className='pt-0 mx-auto sm:pt-[40px]' >
-                <video src={S3.url() + project.video} controls width={400} height={300} onPlay={(e) => {video_onclick(project.title)}}>
+                <video src={S3.url() + project.video} controls width={400} height={300} poster={S3.url() + project.photo} onPlay={(e) => {video_onclick(project.title)}}>
                 </video>
               </div> :
               <img className="absolute  top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={S3.url() + project.photo} alt={project.title} />
