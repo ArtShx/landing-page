@@ -1,6 +1,6 @@
 
-import {ISkill, my_skills} from './Skills'
-import {FaGithub, FaYoutube} from "react-icons/fa";
+import {my_skills} from './Skills'
+import {FaGithub} from "react-icons/fa";
 import ReactGA from 'react-ga4';
 
 import data from './../data/projects.json'
@@ -45,7 +45,7 @@ function Tools({tools}: {tools: string[]}) {
 
 function Project({project}: {project: IProject}) {
   return (
-    <div className="mb-3 sm:mb-8 last:mb-0">
+    <div className="mb-8 last:mb-0">
       <div className="bg-gray-100 max-w-[58rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative md:min-h-[20rem] hover:bg-gray-200 transition dark:text-white dark:bg-white/10 dark:hover:bg-white/20 mx-auto ">
         <div className="flex flex-wrap">
           <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 lg:max-w-[50%] flex flex-col w-[400px] mx-auto ">
@@ -64,7 +64,10 @@ function Project({project}: {project: IProject}) {
           {
 
             project.video ?
-              <iframe src={project.video} allow="autoplay" className="m-auto sm:mb-4 lg:m-auto  " width="400" height="300"></iframe> : 
+              <div className='pt-0 mx-auto sm:pt-[40px]' >
+                <video src={S3.url() + project.video} controls width={400} height={300} onPlay={(e) => {video_onclick(project.title)}}>
+                </video>
+              </div> :
               <img className="absolute  top-[60px] -right-10 w-[28.25rem] rounded-t-lg shadow-2xl scale-[1.0] transition  lg:scale-[1.1] group-hover:-translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2" src={S3.url() + project.photo} alt={project.title} />
           }
         </div>
