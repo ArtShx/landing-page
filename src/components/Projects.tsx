@@ -26,7 +26,7 @@ function video_onclick(project_name: string) {
 function Tools({tools}: {tools: string[]}) {
   // Inline tools used for each project
   return (
-    <ul className="flex flex-wrap gap-2 mb-3 sm:mt-auto">
+    <ul className="flex flex-wrap gap-2 mb-3 ">
       <span className="font-bold text-gray-500 dark:text-white/70 mt-2">Made with: </span>
       {
         tools.map((tool) => {
