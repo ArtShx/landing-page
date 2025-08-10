@@ -29,7 +29,7 @@ function ProfilePhoto() {
 function Description() {
   return (
     <div className="mt-5">
-      <p className="mb-4 md:mb-10 mt-4 px-0 sm:px-4 text-xl font-medium !leading-[1.5] sm:text-3xl lg:text-4xl text-white max-w-[50rem] mx-auto text-center">Hello, my name is <span className="font-bold">Arthur Miada</span> and I'm a <span className="font-bold">software engineer</span>. Started studying IT in 2014, spent the last years working with Computer Vision and image/video processing.</p> 
+      <p className="mb-4 md:mb-10 mt-4 px-0 sm:px-4 text-xl font-medium !leading-[1.5] sm:text-3xl lg:text-4xl text-white max-w-[50rem] mx-auto text-center">Hello, I'm <span className="font-bold">Arthur Miada</span> and I'm a <span className="font-bold">backend engineer</span>. 7 years of experience building scalable, clean and reliable solutions.</p>
     </div>
   )
 
