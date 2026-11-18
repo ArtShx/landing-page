@@ -56,6 +56,13 @@ function Job({job, index}: {job: IJob, index: number}) {
 }
 
 const jobs: Array<IJob> = [{
+  title: "Backend Engineer",
+  description: "Design, implement new features for the settlement/payment system, automated unit tests. Using mainly python with AWS solutions to build scalable, resilient, microservices, and cloud-native solutions.",
+  company: "Gsurf",
+  period: new Period(
+    new Date(2024, 8),
+  ),
+},  {
   title: "Computer Vision Engineer",
   description: "Developed a scene recognition system utilizing data from LiDAR, 360-degree cameras, and GPS sensors mounted on a vehicle. The project aimed to analyze the environment to identify electric distribution wires and assess their proximity to high vegetation.",
   company: "Pix Force",

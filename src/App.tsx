@@ -5,7 +5,6 @@ import ProjectGroup from './components/Projects';
 import { Skills } from './components/Skills';
 import Experience from './components/Experience';
 import Education from './components/Education';
-import ContactMe from './components/Contact';
 
 function App() {
   ReactGA.initialize(process.env.REACT_APP_GA_ID ?? "", {
@@ -21,7 +20,6 @@ function App() {
         <Skills />
         <Experience />
         <Education />
-        <ContactMe />
       </div>
     </div>
   );
