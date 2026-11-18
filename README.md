@@ -1,6 +1,6 @@
 # Landing Page
 This is my landing page made with React / Typescript.
-You can access it [here](http://arthurmiada.com).
+You can access it [here](https://artshx.github.io/landing-page).
 
 
 ### TODO
@@ -21,10 +21,8 @@ You can access it [here](http://arthurmiada.com).
 
 ### Deploy
 
-```
-ssh into ec2 instance
-cd landind-page
-git pull
-npm run build
-sudo systemctl restart landing-page
-```
+The site is deployed to [GitHub Pages](https://artshx.github.io/landing-page) by the
+[`Deploy to GitHub Pages`](.github/workflows/deploy.yml) workflow on every push to `master`.
+The workflow builds the app and publishes the `build/` artifact, so no manual step is required.
+
+One-time repository setup: under **Settings → Pages**, set **Source** to **GitHub Actions**.
